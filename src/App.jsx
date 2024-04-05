@@ -11,9 +11,10 @@ const Example = () => {
 
 	const [result, setResult] = useState("No result");
 
-	const handleScan = (result) => {
-		if (result) {
-			setResult(result);
+	const handleScan = ({data}) => {
+		if (data) {
+      console.log(data)
+			// setResult(result);
 		}
 	};
 
