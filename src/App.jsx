@@ -1,38 +1,12 @@
-import React, { useState } from "react";
-import QrReader from "react-web-qr-reader";
+import QrCodeScanner from "./component/Native";
 
-const Example = () => {
-	const delay = 500;
-
-	const previewStyle = {
-		height: 240,
-		width: 320,
-	};
-
-	const [result, setResult] = useState("No result");
-
-	const handleScan = ({data}) => {
-		if (data) {
-      console.log(data)
-			// setResult(result);
-		}
-	};
-
-	const handleError = (error) => {
-		console.log(error);
-	};
-
-	return (
+function App() {
+  return (
 		<>
-			<QrReader
-				delay={delay}
-				style={previewStyle}
-				onError={handleError}
-				onScan={handleScan}
-			/>
-			<p>{result}</p>
+			<h1> this is the app component</h1>
+			<QrCodeScanner />
 		</>
 	);
-};
+}
 
-export default Example;
+export default App
